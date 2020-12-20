@@ -12,7 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let sampleDependencies = SampleDependencies(imageProviderDependency: "image provider dependency", videoProviderDependency: "video provider dependency")
+              
+              let sampleClass = SampleClass(withDependecies: sampleDependencies)
+              
+              print(sampleClass.dependecies.videoProviderDependency)
+              print(sampleClass.dependecies.imageProviderDependency)
+              // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
 
